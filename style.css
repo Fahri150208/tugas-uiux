@@ -1,0 +1,222 @@
+/* ===== Reset & dasar ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+    --bg: #f2f4f3;
+    --kertas: #ffffff;
+    --teks: #2a3331;
+    --teks-lembut: #5b6663;
+    --aksen: #3d5a5c;
+    --aksen-gelap: #2b4143;
+    --garis: #d5dcda;
+    --harga: #a8402a;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--teks);
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* ===== Header & kutipan ===== */
+#header {
+    background: var(--aksen-gelap);
+    color: #fff;
+    text-align: center;
+    padding: 48px 20px 40px;
+}
+#header h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    max-width: 780px;
+    margin: 0 auto 24px;
+}
+#header blockquote {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 0 0 20px;
+    border-left: 3px solid #9fb8b6;
+    text-align: left;
+    font-style: italic;
+    color: #dbe6e4;
+}
+#soekarno {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #9fb8b6;
+}
+
+/* ===== Navigasi ===== */
+nav {
+    background: var(--kertas);
+    border-bottom: 1px solid var(--garis);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+nav a {
+    display: block;
+    padding: 14px 22px;
+    color: var(--aksen);
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover,
+nav a:focus-visible {
+    background: var(--bg);
+    color: var(--aksen-gelap);
+    outline: none;
+}
+
+/* ===== Wadah konten ===== */
+.gambar,
+.isi,
+#profil,
+#beternak,
+.koleksi,
+.promo {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ===== Gambar utama ===== */
+.gambar {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+.gambar img {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ===== Paragraf pembuka ===== */
+.isi { padding-top: 32px; }
+.isi p { margin-bottom: 18px; text-align: justify; }
+.jawa { font-weight: bold; color: var(--aksen); }
+
+/* ===== Profil & budidaya ===== */
+#profil,
+#beternak { padding-top: 28px; padding-bottom: 8px; }
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--aksen-gelap);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--garis);
+}
+#profil ul { padding-left: 22px; }
+#profil li { margin-bottom: 10px; }
+
+#beternak ol { padding-left: 24px; }
+#beternak li { margin-bottom: 18px; }
+#beternak h4 {
+    font-size: 1.1rem;
+    color: var(--aksen);
+    margin-bottom: 4px;
+}
+#beternak p { text-align: justify; }
+
+/* ===== Koleksi foto ===== */
+.koleksi {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+.koleksi img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ===== Promo ===== */
+.promo {
+    background: var(--kertas);
+    border: 1px solid var(--garis);
+    border-radius: 8px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+    text-align: center;
+    width: calc(100% - 40px);
+}
+.promo h2 {
+    font-size: 1.4rem;
+    color: var(--aksen-gelap);
+    margin-bottom: 18px;
+}
+.promo h3 {
+    border: none;
+    font-size: 1.15rem;
+    color: var(--teks);
+    margin-bottom: 20px;
+}
+.promo del { color: var(--teks-lembut); }
+.promo strong {
+    color: var(--harga);
+    font-size: 1.6rem;
+}
+#Wa {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 16px;
+    background: var(--aksen);
+    color: #fff;
+    border-radius: 4px;
+}
+.promo h4 {
+    font-size: 1rem;
+    color: var(--teks-lembut);
+    margin-bottom: 8px;
+}
+.promo ol {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.promo ol a {
+    display: block;
+    padding: 6px 18px;
+    border: 1px solid var(--aksen);
+    border-radius: 4px;
+    color: var(--aksen);
+    text-decoration: none;
+}
+.promo ol a:hover,
+.promo ol a:focus-visible {
+    background: var(--aksen);
+    color: #fff;
+}
+
+/* ===== Layar kecil ===== */
+@media (max-width: 640px) {
+    #header h1 { font-size: 1.6rem; }
+    nav ul { gap: 0; }
+    nav a { padding: 12px 14px; }
+    .gambar { flex-direction: column; }
+    .gambar img { height: 240px; }
+    .koleksi { grid-template-columns: 1fr; }
+    .isi p, #beternak p { text-align: left; }
+}
